@@ -1,5 +1,7 @@
 var findReplace = function(message, find, replace) {
-
+	var reg = new RegExp(find, "gi")
+	var new_message = message.replace(reg, replace); 
+	return new_message;
 };
 
 // $(document).ready(function () {
