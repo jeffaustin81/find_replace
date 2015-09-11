@@ -3,7 +3,6 @@ var findReplace = function(message, find, replace) {
 	var reg = new RegExp(re, "gi")
 	var new_message = message.replace(reg, replace); 
 	return new_message;
-	debugger;
 };
 
 $(document).ready(function () {
