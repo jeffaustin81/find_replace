@@ -1,6 +1,6 @@
 var findReplace = function(message, find, replace) {
     var re = "\\b" + find + "\\b";
-    var reg = new RegExp(re, "gi")
+    var reg = new RegExp(re, "gi");
     var new_message = message.replace(reg, replace);
     return new_message;
 };
