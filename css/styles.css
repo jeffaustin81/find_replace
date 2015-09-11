@@ -1,3 +1,11 @@
-#result {
+#original_message {
+	display: none;
+}
+
+#find_replace {
+	display: none;
+}
+
+#home {
 	display: none;
 }

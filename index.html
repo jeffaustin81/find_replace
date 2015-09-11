@@ -6,24 +6,42 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/scripts.js"></script>
 	<meta charset="UTF-8">
-	<title>My Title</title>
+	<title>Find Replace</title>
 </head>
 <body>
 	<div class="container">
-      <h1>My Header</h1>
+      <h1>Enter a message, and then find and replace a word!</h1>
 
-      <form id="my_form" class="form-group">
+      <form id="add_message" class="form-group">
         <div class="form-group">
-          <label for="my_input">Enter some "text":</label>
-          <input id="my_input" class="form-control" type="text" require>
+          <label for="message">Enter a message:</label>
+          <input id="message" class="form-control" type="text" require>
         </div>
 
         <button type="submit" class="btn btn-success">Submit</button>
       </form>
+      
+      <form id="find_replace" class="form-group">
+        <div class="form-group">
+          <label for="find">Enter word you want to replace:</label>
+          <input id="find" class="form-control" type="text" require>
+        </div>
+        <div class="form-group">
+          <label for="replace">Enter replacement word:</label>
+          <input id="replace" class="form-control" type="text" require>
+        </div>
 
-      <div id="result">
-        <h2><span class="my_output"></span></h2>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      
+      <div id="original_message">
+        <h2><span class="message"></span></h2>
       </div>
+      
+      <div id="new_message">
+        <h2><span class="new_message"></span></h2>
+      </div>
+      
     </div>
 	
 </body>

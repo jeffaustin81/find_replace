@@ -1,20 +1,39 @@
 var findReplace = function(message, find, replace) {
-	var reg = new RegExp(find, "gi")
+	var re = "\\b" + find + "\\b";
+	var reg = new RegExp(re, "gi")
 	var new_message = message.replace(reg, replace); 
 	return new_message;
+	debugger;
 };
 
-// $(document).ready(function () {
-// 	$("form#encryption").submit(function(event) {
+$(document).ready(function () {
+	$("form#add_message").submit(function(event) {
 
-// 		var my_input = $("input#my_input").val();
-// 		var my_output = myFunction(my_input);
+		var message = $("input#message").val();
+		
+		$(".message").text(message);
 
-// 		$(".my_input").text(my_input);
-// 		$(".my_output").text(my_output);
+		$("#original_message").show();
+		$("form#add_message").hide();
+		$("form#find_replace").show();
+		event.preventDefault();
+		
+		$("form#find_replace").submit(function(event) {
+
+		var find = $("input#find").val();
+		var replace = $("input#replace").val();
+		var replace_message = findReplace(message, find, replace);
 
 
-// 		$("#result").show();
-// 		event.preventDefault();
-// 	});
-// });
+		$(".new_message").text(replace_message);
+
+		$("#new_message").show();
+		$("#original_message").hide();
+		$("form#find_replace").hide();
+		$("form#home").show();
+		event.preventDefault();
+	    });
+	});
+	
+	
+});
